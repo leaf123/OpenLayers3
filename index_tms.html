@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>太乐地图离线地图应用演示系统 V1.0</title>
+	<link rel="icon" type="images/img" href="64.ico" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/ol.css" type="text/css">
+    <link rel="stylesheet" href="css/defaults.css">
+	<style>
+	/* 调整OL控件位置和样式 */
+	.ol-zoom{
+		top:80px;
+	}
+	.ol-zoom-extent{
+		top:140px;
+	}
+	.ol-full-screen{
+		top:80px;
+	}
+	.ol-scale-line{
+		left:200px;
+	}
+	.mouse-position-wrapper{
+		width:300px; 
+		height:29px; 
+		color:#FFFFFF; 
+		position:absolute; 
+		right:20px; 
+		bottom:1px; 
+		z-index:999;
+	}
+	/* 调整地标弹出提示框的宽度 */
+	.popover{
+		width: 250px;
+	}
+	</style>
+</head>
+
+<body onload="init()">
+<div id="map"><div id="popup"></div></div>
+<div id="header">
+    <div id="logoandtitle">太乐地图离线地图应用演示系统 V1.0（OpenLayers3 for TMS）
+		<nav id="main_menu">
+			<div class="navi-co co">
+				<ul class="navi navi-pi">
+					<li class="dropdown"><a target="_blank" href="http://www.arctiler.com/sample/OpenLayers3/index.html">访问完整演示系统</a></li>
+					<li class="dropdown"><a target="_blank" href="https://item.taobao.com/item.htm?id=16518494634">付费购买去除地图水印</a></li>
+					<li class="dropdown"><a target="_blank" href="http://www.arctiler.com/openlayers/v3.18.2/apidoc/">OL3API文档</a></li>
+					<li class="dropdown"><a target="_blank" href="http://www.arctiler.com/openlayers/v3.18.2/examples/">OL3范例</a></li>
+					<li class="dropdown"><a href="javascript:{}" onclick="showAbout()">关于</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+    <div id="version"> - 让地理信息应用更简单</div>
+</div>
+
+<div id="mouse-position" class="mouse-position-wrapper">
+    <div class="custom-mouse-position"></div>
+</div>
+<div id="aboutContainer" class="baseContainer">
+    <div class="toolWindowTitle">关于<span id="closeBtn" onclick="hideAbout()">X</span></div>
+    <div id="aboutContent" class="baseContent">
+        <p class="aboutText">此系统为 <a target="_blank" href="http://www.arctiler.com/p_downloader.html">太乐地图下载器</a> 试用版本自动生成站点，未包含完整功能。 <a target="_blank" href="https://item.taobao.com/item.htm?id=16518494634">付费购买</a> 专业版或企业版，即可获取完整功能源码，助您快速构建离线地图站点。</p>
+        <p class="aboutText"><a target="_blank" href="http://www.arctiler.com">太乐地图</a> 品牌 隶属于成都上思科技有限公司(chengdu 3stech co.,ltd)。公司位于四川省成都市天府软件园，注册资本100万，主要从事3S（GIS、RS、GPS）系列产品与项目的研发和咨询工作，经过多年的经验积累，已经逐步形成了成熟的解决方案和产品体系。</p>
+		<p class="aboutText">相信太乐，牵手太乐，我们愿与您一同前行。</p>
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/ol.js"></script>
+<script src="js/metadata.js"></script>
+<script src="js/app_tms.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
